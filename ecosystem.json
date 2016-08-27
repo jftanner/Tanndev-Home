@@ -18,6 +18,5 @@
       "path": "/var/tanndev-home/production",
       "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env production"
     }
-    }
   }
 }
