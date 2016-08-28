@@ -72,8 +72,6 @@ else {
 // START SERVER ----------------------------------------------------------------
 // Default port is 3000.
 var port = 3000;
-// Unless we're in production, in which case use port 80.
-if (NODE_ENV === 'production') port = 80;
 // If there is a specified port, use that instead.
 if (process.env.port) port = process.env.port;
 
