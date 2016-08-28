@@ -20,7 +20,7 @@ const NODE_ENV = app.get('env');
 // VIEW ENGINE -----------------------------------------------------------------
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 // MIDDLEWARE ------------------------------------------------------------------
 // TODO Put a favicon in public.
