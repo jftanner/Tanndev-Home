@@ -3,19 +3,19 @@
  */
 
 // REQUIRES --------------------------------------------------------------------
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+const routes = require('./routes/index');
+const users = require('./routes/users');
 
 // INITIALIZE ------------------------------------------------------------------
-var app = express();
-var env = app.get('env');
+const app = express();
+const NODE_ENV = app.get('env');
 
 // VIEW ENGINE -----------------------------------------------------------------
 // view engine setup
@@ -50,7 +50,7 @@ app.use(function (req, res, next) {
 
 // ERROR HANDLING --------------------------------------------------------------
 // In development, register an error handler that prints stack traces.
-if (env === 'development') {
+if (NODE_ENV === 'development') {
     app.use(function (err, req, res) {
         res.status(err.status || 500);
         res.render('error', {
@@ -73,13 +73,13 @@ else {
 // Default port is 3000.
 var port = 3000;
 // Unless we're in production, in which case use port 80.
-if (app.get(env) == 'production') port = 80;
+if (NODE_ENV === 'production') port = 80;
 // If there is a specified port, use that instead.
 if (process.env.port) port = process.env.port;
 
 // Listen on the selected port and that we've started.
 app.listen(port);
-console.log('Listening on port ' + port + ' (' + app.get('env') + ')');
+console.log('Listening on port ' + port + ' (' + NODE_ENV + ')');
 
 // EXPORT ----------------------------------------------------------------------
 module.exports = app;
