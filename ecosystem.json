@@ -2,7 +2,7 @@
   "apps" : [
     {
       "name": "Tanndev-Home",
-      "script": "app.js",
+      "script": "server.js",
       "env": {},
       "env_production" : {
         "NODE_ENV": "production",
