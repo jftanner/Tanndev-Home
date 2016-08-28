@@ -66,6 +66,7 @@ app.use(function (err, req, res, next) {
 
 var port = process.env.port || 3000;
 app.listen(port);
+console.log('Running in ' + app.get('env') + ' mode');
 console.log('Listening on port ' + port);
 
 
