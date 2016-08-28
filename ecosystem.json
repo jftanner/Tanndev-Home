@@ -3,8 +3,6 @@
     {
       "name": "tanndev-home",
       "script": "server.js",
-      "exec_mode": "cluster",
-      "instances": "max",
       "env": {},
       "env_production" : {
         "NODE_ENV": "production"
